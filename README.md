@@ -1,2 +1,92 @@
 # angularMultipleSelect
 A complete Angularjs directive for multiple select autocomplete
+
+#Getting started
+Grab the sources with bower, npm or download from Github: [https://github.com/jagdeepsingh91/angularMultipleSelect/tree/v0.1/build]:
+
+Install "angular-multiple-select" from bower or npm and save it in your package.json or bower.json.
+For Example :
+
+```sh
+$ npm install --save angular-multiple-select;
+$ bower install --savev angular-multiple-select
+```
+
+After installation include its 
+```html
+multiple-select.min.css AND
+multiple-select.min.js
+<script src="/bower_components/angular-multiple-select/build/multiple-select.min.js"></script>
+<link href="/bower_components/angular-multiple-select/build/multiple-select.min.css" rel="stylesheet">
+```
+in your html. Then,
+
+Include `multipleSelect` module in your app:
+For example :
+
+```javascript
+angular.module('yourModuleName', [
+    'multipleSelect'
+]);
+```
+Now angularMultipleSelect module is injected in your module. You are ready to use it.
+
+You can use it in 2 ways in your form :
+1. If your options list is an array of objects, like :
+
+```javascript
+$scope.optionsList = [
+  {id: 1,  name : "Java"},
+  {id: 2,  name : "C"},
+  {id: 3,  name : "C++"},
+  {id: 4,  name : "AngularJs"},
+  {id: 5,  name : "JavaScript"}
+];
+```
+```html
+<multiple-autocomplete ng-model="selectedList"
+     object-property="name"
+     suggestions-arr="optionsList">
+</multiple-autocomplete>
+```
+Here, in "suggestions-arr" you have to provide the options list from which user can select multiple value.
+and, "object-property" is which you want to show to user. In above example "name" is the property which i want to show.
+
+"ng-model" will give you an array of selected things.
+For Ex : If user selects Java & C++, then
+```javascript
+ng-model will have
+selectedList = [
+      {id: 1,  name : "Java"},
+      {id: 3,  name : "C++"}
+  ]
+```
+2. If your options list is an array of strings, like :
+
+```javascript
+$scope.optionsList = [
+  "Java",
+  "C",
+  "C++",
+  "AngularJs",
+  "JavaScript"
+];
+```
+```html
+<multiple-autocomplete ng-model="selectedList"
+     suggestions-arr="optionsList">
+</multiple-autocomplete>
+```
+Here, in "suggestions-arr" you have to provide the options list from which user can select multiple value.
+
+"ng-model" will give you an array of selected things.
+For Ex : If user selects Java & C++, then
+```javascript
+ng-model will have
+selectedList = [
+      "Java",
+      "C++"
+  ]
+```
+
+
