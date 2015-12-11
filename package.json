@@ -1,6 +1,6 @@
 {
   "name": "angular-multiple-select",
-  "version": "v0.0.1",
+  "version": "v1.0.0",
   "description": "A complete Angularjs directive for multiple selection with suggestion list, like skills, locations etc.",
   "main": [
     "build/multiple-select.min.js",

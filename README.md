@@ -7,7 +7,9 @@ Grab the sources with bower, npm or download from Github: [https://github.com/ja
 #Sample View
 https://cloud.githubusercontent.com/assets/13271120/11739891/b2d3e426-a014-11e5-9b57-a0d758f07bf0.png
 
-Live Example will be uploaded shortly
+#Example
+http://run.plnkr.co/plunks/XbHaZSiYqEzxjk6TuWyj/
+
 
 Install "angular-multiple-select" from bower or npm and save it in your package.json or bower.json.
 For Example :
