@@ -1,0 +1,22 @@
+<div>
+    <h2>
+        AngularJs multiple select autocomplete field
+    </h2>
+    <hr/>
+    <div class="mrg-top50">
+        <label>1. Autocomplete field - options list as array of objects</label>
+        <multiple-autocomplete ng-model="skills"
+                               object-property="name"
+                               suggestions-arr="skillsList">
+        </multiple-autocomplete>
+        <label>Selected Model Value :<br/></label>{{skills}}
+    </div>
+
+    <div class="mrg-top50">
+        <label>2. Autocomplete field - options as list of strings</label>
+        <multiple-autocomplete ng-model="skills1"
+                               suggestions-arr="skillsList1">
+        </multiple-autocomplete>
+        <label>Selected Model Value :<br/></label>{{skills1}}
+    </div>
+</div>

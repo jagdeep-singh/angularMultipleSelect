@@ -1,0 +1,34 @@
+{
+  "name": "angularMultipleSelect",
+  "version": "0.0.0",
+  "authors": [
+    "jagdeep91 <singh.jagdep91@gmail.com>"
+  ],
+  "description": "A complete Angularjs directive for multiple select or autocomplete field",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "multiple",
+    "select",
+    "autocomplete",
+    "field",
+    "angular",
+    "multiple",
+    "select",
+    "field"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "ui-router": "~0.2.15"
+  }
+}

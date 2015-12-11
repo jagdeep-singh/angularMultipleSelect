@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Angular Base App</title>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/web/styles/styles.css" rel="stylesheet" />
+	<!-- bower:css -->
+	  <!-- bower installed css files will go here... -->
+	  <!-- endinject -->
+	  <!-- inject:css -->
+	  <!-- built css files will go here... -->
+	  <!-- endinject -->
+</head>
+<body ng-app="multipleSelect" class="container">
+    <section id="content" class="row">
+        <div ui-view>
+
+        </div>
+    </section>
+	<!-- bower:js -->
+	 
+	<script src="/bower_components/angularjs/angular.js"></script>
+	 
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	 
+	<script src="/bower_components/ui-router/release/angular-ui-router.js"></script>
+	 
+	<!-- endinject -->
+	<!-- inject:js -->
+	<script src="/web/app/templates/templates.js"></script>
+	<script src="/web/app/app.js"></script>
+	  <script src="/web/app/routes/routes.js"></script>
+	  <script src="/web/app/home/home-controller.js"></script>
+	  <script src="/web/app/directives/multiple-autocomplete-field/multiple-autocomplete-field.js"></script>
+	  <!-- endinject -->
+</body>
+</html>
