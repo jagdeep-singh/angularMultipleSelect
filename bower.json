@@ -1,6 +1,6 @@
 {
   "name": "angularMultipleSelect",
-  "version": "0.0.0",
+  "version": "v0.1",
   "authors": [
     "jagdeep91 <singh.jagdep91@gmail.com>"
   ],
@@ -8,6 +8,10 @@
   "moduleType": [
     "node"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jagdeepsingh91/angularMultipleSelect.git"
+  },
   "keywords": [
     "multiple",
     "select",
