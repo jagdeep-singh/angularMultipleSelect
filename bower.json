@@ -1,6 +1,10 @@
 {
   "name": "angularMultipleSelect",
   "version": "v0.1",
+  "main": [
+    "build/multiple-select.min.js",
+    "build/multiple-select.min.css"
+  ],
   "authors": [
     "jagdeep91 <singh.jagdep91@gmail.com>"
   ],
