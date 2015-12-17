@@ -29,6 +29,19 @@
                 "BackboneJs",
                 "Sencha Touch",
                 "ExtJs"
-            ]
+            ];
+
+        $scope.onSubmit = function () {
+            console.log("submit");
+            if($scope.multipleSelectForm.$invalid){
+                if($scope.multipleSelectForm.$error.required != null){
+                    $scope.multipleSelectForm.$error.required.forEach(function(element){
+                        element.$setDirty();
+                    });
+                }
+                return null;
+            }
+            alert("valid field");
+        };
     });
 })();

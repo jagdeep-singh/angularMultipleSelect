@@ -96,4 +96,26 @@ selectedList = [
   ]
 ```
 
+3. To make it required Field in a form
+
+```html
+<form name="multipleSelectForm" novalidate>
+    <div ng-class="{'has-error' : multipleSelectForm.multipleSelect.$invalid && multipleSelectForm.multipleSelect.$dirty, 'has-success' : !multipleSelectForm.multipleSelect.$invalid && multipleSelectForm.multipleSelect.$dirty}">
+        <label>3. Making it Required field in a Form</label>
+        <multiple-autocomplete ng-model="skills2" name="multipleSelect" required="true"
+                               suggestions-arr="skillsList1">
+        </multiple-autocomplete>
+        <span ng-show="multipleSelectForm.multipleSelect.$invalid && multipleSelectForm.multipleSelect.$dirty" class="ng-hide">
+            <p class="error-msg" ng-show="multipleSelectForm.multipleSelect.$error.required">Please select something from multiple select field</p>
+        </span>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-default" ng-click="onSubmit()">Submit Form</button>
+</form>
+```
+
+For any suggestions, issues, Query, etc. Please feel free to let me know. Thanks :)
+
+
+
 

@@ -2,7 +2,6 @@ angular.module("templates", []).run(["$templateCache", function($templateCache) 
 (function () {
     //declare all modules and their dependencies.
     angular.module('multipleSelect', [
-        'ui.router',
         'templates'
     ]).config(function () {
 
