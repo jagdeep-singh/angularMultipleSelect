@@ -65,10 +65,10 @@ gulp.task('build', ['copy','cssminify', 'cacheTemplate', 'jsminify'], function()
 });
 
 // Static server
-gulp.task('serve', ['inject', 'watch'] , function() {
+gulp.task('serve', ['watch'] , function() {
     browserSync.init({
         server: {
-            baseDir: "./",
+            baseDir: "./web",
 			routes: {
 				"/bower_components": "bower_components",
 				"/static": "static",

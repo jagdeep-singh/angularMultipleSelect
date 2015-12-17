@@ -13,8 +13,8 @@
 </head>
 <body ng-app="multipleSelect" class="container">
     <section id="content" class="row">
-        <div ui-view>
-
+        <div>
+			<div ng-include="'/web/app/home/home.tpl.html'"></div>
         </div>
     </section>
 	<!-- bower:js -->
@@ -25,13 +25,10 @@
 
 	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	 
-	<script src="/bower_components/ui-router/release/angular-ui-router.js"></script>
-	 
 	<!-- endinject -->
 	<!-- inject:js -->
 	<script src="/web/app/templates/templates.js"></script>
 	<script src="/web/app/app.js"></script>
-	  <script src="/web/app/routes/routes.js"></script>
 	  <script src="/web/app/home/home-controller.js"></script>
 	  <script src="/web/app/directives/multiple-autocomplete-field/multiple-autocomplete-field.js"></script>
 	  <!-- endinject -->

@@ -1,6 +1,6 @@
 {
   "name": "angularMultipleSelect",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "main": [
     "build/multiple-select.min.js",
     "build/multiple-select.min.css"
@@ -22,8 +22,8 @@
     "autocomplete",
     "field",
     "angular",
-    "multiple",
-    "select",
+    "multi",
+    "choose",
     "field"
   ],
   "license": "MIT",
@@ -36,7 +36,6 @@
   ],
   "dependencies": {
     "angularjs": "~1.4.8",
-    "bootstrap": "~3.3.6",
-    "ui-router": "~0.2.15"
+    "bootstrap": "~3.3.6"
   }
 }
