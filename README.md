@@ -114,6 +114,45 @@ selectedList = [
 </form>
 ```
 
+4. Fetching options list from 3rd party api/url
+    Part 1. If your Api return an array of strings like :
+```javascript
+    [
+      "Java",
+      "C",
+      "C++",
+      "AngularJs",
+      "JavaScript"
+    ]
+```
+    Then in html no need to specify property in "object-property" attribute in directive
+```html
+    <multiple-autocomplete ng-model="skillsFromApi"
+                           api-url="{{apiPath}}"
+                           suggestions-arr="">
+    </multiple-autocomplete>
+```
+
+    Part 2. If your Api return an array of objects like :
+```javascript
+    [
+      {id: 1,  name : "Java"},
+      {id: 2,  name : "C"},
+      {id: 3,  name : "C++"},
+      {id: 4,  name : "AngularJs"},
+      {id: 5,  name : "JavaScript"}
+    ]
+```
+    Then in html you need to specify property in "object-property" attribute in directive
+    Here in this case, you have to do like this :
+```html
+    <multiple-autocomplete ng-model="skillsFromApi"
+                            object-property="name"
+                           api-url="{{apiPath}}"
+                           suggestions-arr="">
+    </multiple-autocomplete>
+```
+
 For any suggestions, issues, Query, etc. Please feel free to let me know. Thanks :)
 
 
