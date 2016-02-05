@@ -35,4 +35,14 @@
             <button type="button" class="btn btn-default" ng-click="onSubmit()">Submit Form</button>
         </form>
     </div>
+
+    <div class="mrg-top50">
+        <label>4. Fetching options list from 3rd party api/url</label>
+        <multiple-autocomplete ng-model="skillsFromApi"
+                               css-class="someClass"
+                               api-url="{{apiPath}}"
+                               suggestions-arr="">
+        </multiple-autocomplete>
+        <label>Selected Model Value :<br/></label>{{skillsFromApi}}
+    </div>
 </div>

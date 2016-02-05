@@ -64,8 +64,13 @@ gulp.task('build', ['copy','cssminify', 'cacheTemplate', 'jsminify'], function()
 	.pipe(gulp.dest('./build/'));
 });
 
+gulp.task('inject', function () {
+	gulp.src('./web/index.html')
+		.pipe(inject(gulp.src(bowerFiles(), {read: false}), {name: 'bower'}))
+		.pipe(gulp.dest('./web'));
+});
 // Static server
-gulp.task('serve', ['watch'] , function() {
+gulp.task('serve', ['inject', 'watch'] , function() {
     browserSync.init({
         server: {
             baseDir: "./web",

@@ -44,6 +44,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.1.1",
+    "jquery": "^2.2.0",
     "main-bower-files": "^2.9.0"
   }
 }
