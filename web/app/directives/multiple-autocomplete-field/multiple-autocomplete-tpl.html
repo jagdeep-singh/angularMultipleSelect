@@ -17,8 +17,8 @@
                     ng-change="onChange()">
         </li>
     </ul>
-</div>
-<div class="autocomplete-list" ng-show="isFocused || isHover" ng-mouseenter="onMouseEnter()" ng-mouseleave="onMouseLeave()">
+    
+    <div class="autocomplete-list" ng-show="isFocused || isHover" ng-mouseenter="onMouseEnter()" ng-mouseleave="onMouseLeave()">
     <ul ng-if="objectProperty == undefined || objectProperty == ''">
         <li ng-class="{'autocomplete-active' : selectedItemIndex == $index}"
             ng-repeat="suggestion in suggestionsArr | filter : inputValue | filter : alreadyAddedValues"
@@ -33,4 +33,6 @@
             {{suggestion[objectProperty]}}
         </li>
     </ul>
+</div>
+    
 </div>
