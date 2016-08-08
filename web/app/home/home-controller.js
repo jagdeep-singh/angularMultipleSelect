@@ -32,6 +32,14 @@
             "ExtJs"
         ];
 
+        $scope.selectItemCallback = function(item){
+            $scope.selectedItem = item;
+        };
+
+        $scope.removeItemCallback = function(item){
+            $scope.removedItem = item;
+        };
+
         $scope.onSubmit = function () {
             console.log("submit");
             if($scope.multipleSelectForm.$invalid){

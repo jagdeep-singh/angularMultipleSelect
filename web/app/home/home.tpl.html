@@ -7,9 +7,17 @@
         <label>1. Autocomplete field - options list as array of objects</label>
         <multiple-autocomplete ng-model="skills"
                                object-property="name"
+                               before-select-item="selectItemCallback"
+                               after-select-item="selectItemCallback"
+                               before-remove-item="removeItemCallback"
+                               after-remove-item="removeItemCallback"
                                suggestions-arr="skillsList">
         </multiple-autocomplete>
         <label>Selected Model Value :<br/></label>{{skills}}
+        <br/>
+        <label><u>Event Listeners</u></label><br/>
+        <span>Selected Item : {{selectedItem}}</span><br/>
+        <span>Removed Item : {{removedItem}}</span>
     </div>
 
     <div class="mrg-top50">

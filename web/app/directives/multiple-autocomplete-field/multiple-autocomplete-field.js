@@ -7,9 +7,13 @@
             return {
                 restrict: 'EA',
                 scope : {
-                    suggestionsArr : '=',
+                    suggestionsArr : '=?',
                     modelArr : '=ngModel',
-                    apiUrl : '@'
+                    apiUrl : '@',
+                    beforeSelectItem : '=?',
+                    afterSelectItem : '=?',
+                    beforeRemoveItem : '=?',
+                    afterRemoveItem : '=?'
                 },
                 templateUrl: 'multiple-autocomplete-tpl.html',
                 link : function(scope, element, attr){
@@ -74,8 +78,10 @@
                         };
                         var key = keys[$event.keyCode];
                         if(key == 'backspace' && scope.inputValue == ""){
-                            if(scope.modelArr.length != 0)
-                                scope.modelArr.pop();
+                            if(scope.modelArr.length != 0){
+                                scope.removeAddedValues(scope.modelArr[scope.modelArr.length-1]);
+                                //scope.modelArr.pop();
+                            }
                         }
                         else if(key == 'down'){
                             var filteredSuggestionArr = $filter('filter')(scope.suggestionsArr, scope.inputValue);
@@ -99,7 +105,13 @@
                     };
 
                     scope.onSuggestedItemsClick = function (selectedValue) {
+                        if(scope.beforeSelectItem && typeof(scope.beforeSelectItem) == 'function')
+                            scope.beforeSelectItem(selectedValue);
+
                         scope.modelArr.push(selectedValue);
+
+                        if(scope.afterSelectItem && typeof(scope.afterSelectItem) == 'function')
+                            scope.afterSelectItem(selectedValue);
                         scope.inputValue = "";
                     };
 
@@ -132,8 +144,15 @@
                     scope.removeAddedValues = function (item) {
                         if(scope.modelArr != null && scope.modelArr != "") {
                             var itemIndex = scope.modelArr.indexOf(item);
-                            if (itemIndex != -1)
+                            if (itemIndex != -1) {
+                                if(scope.beforeRemoveItem && typeof(scope.beforeRemoveItem) == 'function')
+                                    scope.beforeRemoveItem(item);
+
                                 scope.modelArr.splice(itemIndex, 1);
+
+                                if(scope.afterRemoveItem && typeof(scope.afterRemoveItem) == 'function')
+                                    scope.afterRemoveItem(item);
+                            }
                         }
                     };
 
