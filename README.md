@@ -1,15 +1,65 @@
 # angularMultipleSelect
 A complete Angularjs directive for multiple select autocomplete
 
-#Getting started
-Grab the sources with bower, npm or download from Github: [https://github.com/jagdeepsingh91/angularMultipleSelect/tree/v0.1/build]:
-
 #Sample View
 https://cloud.githubusercontent.com/assets/13271120/11739891/b2d3e426-a014-11e5-9b57-a0d758f07bf0.png
 
 #Example
 http://run.plnkr.co/plunks/XbHaZSiYqEzxjk6TuWyj/
 
+#Event listeners
+1. beforeSelectItem : Listen for event before adding an item
+    ```javascript
+    $scope.beforeSelectItem = function(item){
+        // perform operation on this item before selecting it.
+    }
+    ```
+    ```html
+    <multiple-autocomplete ng-model="selectedList"
+         before-select-item="beforeSelectItem"
+         suggestions-arr="optionsList">
+    </multiple-autocomplete>
+    ```
+2. afterSelectItem : Listen for event before adding an item
+    ```javascript
+    $scope.afterSelectItem = function(item){
+        // perform operation on this item after selecting it.
+    }
+    ```
+    ```html
+    <multiple-autocomplete ng-model="selectedList"
+         after-select-item="afterSelectItem"
+         suggestions-arr="optionsList">
+    </multiple-autocomplete>
+    ```
+3. beforeRemoveItem : Listen for event before adding an item
+    ```javascript
+    $scope.beforeRemoveItem = function(item){
+        // perform operation on this item before removing it.
+    }
+    ```
+    ```html
+    <multiple-autocomplete ng-model="selectedList"
+         before-remove-item="beforeRemoveItem"
+         suggestions-arr="optionsList">
+    </multiple-autocomplete>
+    ```
+4. afterRemoveItem : Listen for event before adding an item
+    ```javascript
+    $scope.afterRemoveItem = function(item){
+        // perform operation on this item after removing it.
+    }
+    ```
+    ```html
+    <multiple-autocomplete ng-model="selectedList"
+         after-remove-item="afterRemoveItem"
+         suggestions-arr="optionsList">
+    </multiple-autocomplete>
+    ```
+
+
+
+#Getting started
 
 Install "angular-multiple-select" from bower or npm and save it in your package.json or bower.json.
 For Example :
@@ -156,5 +206,24 @@ selectedList = [
 For any suggestions, issues, Query, etc. Please feel free to let me know. Thanks :)
 
 
+# The MIT License (MIT)
 
+  Copyright (c) 2015 Jagdeep Singh
 
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.

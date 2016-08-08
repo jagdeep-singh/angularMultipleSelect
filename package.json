@@ -1,13 +1,11 @@
 {
   "name": "angular-multiple-select",
-  "version": "v1.1.1",
+  "version": "v1.1.2",
   "description": "A complete Angularjs directive for multiple selection with suggestion list, like skills, locations etc.",
-  "main": [
-    "build/multiple-select.min.js",
-    "build/multiple-select.min.css"
-  ],
+  "main": "build/multiple-select.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "gulp serve"
   },
   "repository": {
     "type": "git",
@@ -34,7 +32,6 @@
   "dependencies": {
     "bower": "^1.7.0",
     "browser-sync": "^2.10.0",
-    "event-stream": "^3.3.2",
     "gulp": "^3.9.0",
     "gulp-angular-templatecache": "^1.8.0",
     "gulp-concat": "^2.6.0",
@@ -44,7 +41,6 @@
     "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.1.1",
-    "jquery": "^2.2.0",
     "main-bower-files": "^2.9.0"
   }
 }
