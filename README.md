@@ -9,53 +9,59 @@ http://run.plnkr.co/plunks/XbHaZSiYqEzxjk6TuWyj/
 
 #Event listeners
 1. beforeSelectItem : Listen for event before adding an item
-    ```javascript
-    $scope.beforeSelectItem = function(item){
-        // perform operation on this item before selecting it.
-    }
-    ```
-    ```html
-    <multiple-autocomplete ng-model="selectedList"
-         before-select-item="beforeSelectItem"
-         suggestions-arr="optionsList">
-    </multiple-autocomplete>
-    ```
+
+```javascript
+$scope.beforeSelectItem = function(item){
+    // perform operation on this item before selecting it.
+}
+```
+```html
+<multiple-autocomplete ng-model="selectedList"
+     before-select-item="beforeSelectItem"
+     suggestions-arr="optionsList">
+</multiple-autocomplete>
+```
+
 2. afterSelectItem : Listen for event before adding an item
-    ```javascript
-    $scope.afterSelectItem = function(item){
-        // perform operation on this item after selecting it.
-    }
-    ```
-    ```html
-    <multiple-autocomplete ng-model="selectedList"
-         after-select-item="afterSelectItem"
-         suggestions-arr="optionsList">
-    </multiple-autocomplete>
-    ```
+```javascript
+$scope.afterSelectItem = function(item){
+    // perform operation on this item after selecting it.
+}
+```
+```html
+<multiple-autocomplete ng-model="selectedList"
+     after-select-item="afterSelectItem"
+     suggestions-arr="optionsList">
+</multiple-autocomplete>
+```
+
 3. beforeRemoveItem : Listen for event before adding an item
-    ```javascript
-    $scope.beforeRemoveItem = function(item){
-        // perform operation on this item before removing it.
-    }
-    ```
-    ```html
-    <multiple-autocomplete ng-model="selectedList"
-         before-remove-item="beforeRemoveItem"
-         suggestions-arr="optionsList">
-    </multiple-autocomplete>
-    ```
+
+```javascript
+$scope.beforeRemoveItem = function(item){
+    // perform operation on this item before removing it.
+}
+```
+```html
+<multiple-autocomplete ng-model="selectedList"
+     before-remove-item="beforeRemoveItem"
+     suggestions-arr="optionsList">
+</multiple-autocomplete>
+```
+
 4. afterRemoveItem : Listen for event before adding an item
-    ```javascript
-    $scope.afterRemoveItem = function(item){
-        // perform operation on this item after removing it.
-    }
-    ```
-    ```html
-    <multiple-autocomplete ng-model="selectedList"
-         after-remove-item="afterRemoveItem"
-         suggestions-arr="optionsList">
-    </multiple-autocomplete>
-    ```
+
+```javascript
+$scope.afterRemoveItem = function(item){
+    // perform operation on this item after removing it.
+}
+```
+```html
+<multiple-autocomplete ng-model="selectedList"
+     after-remove-item="afterRemoveItem"
+     suggestions-arr="optionsList">
+</multiple-autocomplete>
+```
 
 
 
