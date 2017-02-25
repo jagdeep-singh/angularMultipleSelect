@@ -72,7 +72,7 @@ For Example :
 
 ```sh
 $ npm install --save angular-multiple-select;
-$ bower install --savev angular-multiple-select
+$ bower install --save angular-multiple-select
 ```
 
 After installation include its 
