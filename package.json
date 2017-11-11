@@ -5,7 +5,8 @@
   "main": "build/multiple-select.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "gulp serve"
+    "start": "gulp serve",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",

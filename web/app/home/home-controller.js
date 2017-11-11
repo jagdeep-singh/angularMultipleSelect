@@ -2,6 +2,17 @@
 
     angular.module('multipleSelect').controller('homeController', function ($scope) {
         $scope.apiPath = "web/resources/skills.json";
+        $scope.apiUrlOption = {
+            method : "GET",
+            responseInterceptor : function (response) {
+                /*
+                *
+                * Process response acc. to your requirement.
+                * After processing we are assuming "response.data" as "suggestionsArr".
+                *
+                * */
+            }
+        };
 
         $scope.skillsList = [
             {id: 1, name : "Java"},

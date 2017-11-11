@@ -19,20 +19,20 @@
     </ul>
     
     <div class="autocomplete-list" ng-show="isFocused || isHover" ng-mouseenter="onMouseEnter()" ng-mouseleave="onMouseLeave()">
-    <ul ng-if="objectProperty == undefined || objectProperty == ''">
-        <li ng-class="{'autocomplete-active' : selectedItemIndex == $index}"
-            ng-repeat="suggestion in suggestionsArr | filter : inputValue | filter : alreadyAddedValues"
-            ng-click="onSuggestedItemsClick(suggestion)" ng-mouseenter="mouseEnterOnItem($index)">
-            {{suggestion}}
-        </li>
-    </ul>
-    <ul ng-if="objectProperty != undefined && objectProperty != ''">
-        <li ng-class="{'autocomplete-active' : selectedItemIndex == $index}"
-            ng-repeat="suggestion in suggestionsArr | filter : inputValue | filter : alreadyAddedValues"
-            ng-click="onSuggestedItemsClick(suggestion)" ng-mouseenter="mouseEnterOnItem($index)">
-            {{suggestion[objectProperty]}}
-        </li>
-    </ul>
-</div>
-    
+        <ul ng-if="objectProperty == undefined || objectProperty == ''">
+            <li ng-class="{'autocomplete-active' : selectedItemIndex == $index}"
+                ng-repeat="suggestion in suggestionsArr | filter : inputValue | filter : alreadyAddedValues"
+                ng-click="onSuggestedItemsClick(suggestion)" ng-mouseenter="mouseEnterOnItem($index)">
+                {{suggestion}}
+            </li>
+        </ul>
+        <ul ng-if="objectProperty != undefined && objectProperty != ''">
+            <li ng-class="{'autocomplete-active' : selectedItemIndex == $index}"
+                ng-repeat="suggestion in suggestionsArr | filter : inputValue | filter : alreadyAddedValues"
+                ng-click="onSuggestedItemsClick(suggestion)" ng-mouseenter="mouseEnterOnItem($index)">
+                {{suggestion[objectProperty]}}
+            </li>
+        </ul>
+    </div>
+
 </div>

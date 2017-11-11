@@ -171,6 +171,31 @@ selectedList = [
 ```
 
 4. Fetching options list from 3rd party api/url
+    
+    You can specify "api-url-option" and you can process response before we capture it. Below is the Example :
+    
+    ```javascript
+        $scope.apiUrlOption = {
+            method : "GET",
+            responseInterceptor : function (response) {
+                /*
+                *
+                * Process response acc. to your requirement.
+                * After processing we are assuming "response.data" as "suggestionsArr".
+                *
+                * */
+            }
+        };
+    ```
+        Then in html no need to specify property in "object-property" attribute in directive
+    ```html
+        <multiple-autocomplete ng-model="skillsFromApi"
+                               api-url="{{apiPath}}"
+                               suggestions-arr=""
+                               api-url-option="apiUrlOption">
+        </multiple-autocomplete>
+    ```
+
     Part 1. If your Api return an array of strings like :
 ```javascript
     [

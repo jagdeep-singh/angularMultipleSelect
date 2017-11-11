@@ -10,6 +10,7 @@
                     suggestionsArr : '=?',
                     modelArr : '=ngModel',
                     apiUrl : '@',
+                    apiUrlOption : '=?',
                     beforeSelectItem : '=?',
                     afterSelectItem : '=?',
                     beforeRemoveItem : '=?',
@@ -26,10 +27,15 @@
                     scope.isFocused = false;
                     var getSuggestionsList = function () {
                         var url = scope.apiUrl;
+                        var method = (scope.apiUrlOption && scope.apiUrlOption.method) || "GET";
+                        var responseInterceptor = (scope.apiUrlOption && scope.apiUrlOption.responseInterceptor);
                         $http({
-                            method: 'GET',
+                            method: method,
                             url: url
                         }).then(function (response) {
+                            if(responseInterceptor && typeof responseInterceptor == "function"){
+                                responseInterceptor(response);
+                            }
                             scope.suggestionsArr = response.data;
                         }, function (response) {
                             console.log("*****Angular-multiple-select **** ----- Unable to fetch list");
@@ -113,6 +119,10 @@
                         if(scope.afterSelectItem && typeof(scope.afterSelectItem) == 'function')
                             scope.afterSelectItem(selectedValue);
                         scope.inputValue = "";
+
+                        if(scope.suggestionsArr.length == scope.modelArr.length){
+                            scope.isHover = false;
+                        }
                     };
 
                     var isDuplicate = function (arr, item) {
