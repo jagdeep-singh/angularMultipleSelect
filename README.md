@@ -1,5 +1,6 @@
 # angularMultipleSelect
 A complete Angularjs directive for multiple select autocomplete
+http://jagdeep-singh.github.io/angularMultipleSelect/
 
 #Sample View
 https://cloud.githubusercontent.com/assets/13271120/11739891/b2d3e426-a014-11e5-9b57-a0d758f07bf0.png
