@@ -1,6 +1,6 @@
 {
   "name": "angular-multiple-select",
-  "version": "v1.1.2",
+  "version": "v1.1.3",
   "description": "A complete Angularjs directive for multiple selection with suggestion list, like skills, locations etc.",
   "main": "build/multiple-select.min.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jagdeepsingh91/angularMultipleSelect.git"
+    "url": "git+https://github.com/jagdeep-singh/angularMultipleSelect.git"
   },
   "keywords": [
     "angular",
@@ -27,9 +27,9 @@
   "author": "Jagdeep Singh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jagdeepsingh91/angularMultipleSelect/issues"
+    "url": "https://github.com/jagdeep-singh/angularMultipleSelect/issues"
   },
-  "homepage": "https://github.com/jagdeepsingh91/angularMultipleSelect#readme",
+  "homepage": "https://github.com/jagdeep-singh/angularMultipleSelect#readme",
   "dependencies": {
     "bower": "^1.7.0",
     "browser-sync": "^2.10.0",
