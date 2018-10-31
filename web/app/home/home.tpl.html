@@ -53,4 +53,15 @@
         </multiple-autocomplete>
         <label>Selected Model Value :<br/></label>{{skillsFromApi}}
     </div>
+
+    <div class="mrg-top50">
+        <label>5. Close list after option selected</label>
+        <multiple-autocomplete ng-model="skills"
+                               object-property="name"
+                               close-after-selected="true"
+                               suggestions-arr="skillsList">
+        </multiple-autocomplete>
+        <label>Selected Model Value :<br/></label>{{skills}}
+        <br/>
+    </div>
 </div>

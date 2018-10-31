@@ -197,6 +197,17 @@ selectedList = [
         </multiple-autocomplete>
     ```
 
+5. To make the list close after selected an item use the close-after-selected attribute
+
+```html
+    <multiple-autocomplete ng-model="skills2" 
+                           name="multipleSelect"
+                           required="true"
+                           close-after-selected="true"                    
+                           suggestions-arr="skillsList1">
+    </multiple-autocomplete>
+```
+
     Part 1. If your Api return an array of strings like :
 ```javascript
     [
