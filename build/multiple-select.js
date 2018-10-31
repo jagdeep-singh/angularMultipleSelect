@@ -24,7 +24,8 @@ angular.module("templates", []).run(["$templateCache", function($templateCache) 
                     beforeSelectItem : '=?',
                     afterSelectItem : '=?',
                     beforeRemoveItem : '=?',
-                    afterRemoveItem : '=?'
+                    afterRemoveItem : '=?',
+                    closeAfterSelected: '=?'
                 },
                 templateUrl: 'multiple-autocomplete-tpl.html',
                 link : function(scope, element, attr){
@@ -130,7 +131,7 @@ angular.module("templates", []).run(["$templateCache", function($templateCache) 
                             scope.afterSelectItem(selectedValue);
                         scope.inputValue = "";
 
-                        if(scope.suggestionsArr.length == scope.modelArr.length){
+                        if(scope.suggestionsArr.length == scope.modelArr.length || scope.closeAfterSelected === true){
                             scope.isHover = false;
                         }
                     };
