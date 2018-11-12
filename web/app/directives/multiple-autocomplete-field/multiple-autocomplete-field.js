@@ -14,7 +14,9 @@
                     beforeSelectItem : '=?',
                     afterSelectItem : '=?',
                     beforeRemoveItem : '=?',
-                    afterRemoveItem : '=?'
+                    afterRemoveItem : '=?',
+                    closeAfterSelected: '=?',
+                    placeholder: '@'
                 },
                 templateUrl: 'multiple-autocomplete-tpl.html',
                 link : function(scope, element, attr){
@@ -25,6 +27,7 @@
                     scope.errMsgRequired = attr.errMsgRequired;
                     scope.isHover = false;
                     scope.isFocused = false;
+                    scope.placeholder = attr.placeholder;
                     var getSuggestionsList = function () {
                         var url = scope.apiUrl;
                         var method = (scope.apiUrlOption && scope.apiUrlOption.method) || "GET";
@@ -120,7 +123,7 @@
                             scope.afterSelectItem(selectedValue);
                         scope.inputValue = "";
 
-                        if(scope.suggestionsArr.length == scope.modelArr.length){
+                        if(scope.suggestionsArr.length == scope.modelArr.length || scope.closeAfterSelected === true){
                             scope.isHover = false;
                         }
                     };

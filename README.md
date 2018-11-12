@@ -64,7 +64,26 @@ $scope.afterRemoveItem = function(item){
 </multiple-autocomplete>
 ```
 
+5. close-after-selected : To make the list close after selected an item
 
+```html
+    <multiple-autocomplete ng-model="skills2" 
+                           name="multipleSelect"
+                           required="true"
+                           close-after-selected="true"                    
+                           suggestions-arr="skillsList1">
+    </multiple-autocomplete>
+```
+
+6. placeholder : Set placeholder
+
+```html
+    <multiple-autocomplete ng-model="skills2" 
+                           name="multipleSelect"
+                           placeholder="Digit here"
+                           suggestions-arr="skillsList1">
+    </multiple-autocomplete>
+```
 
 #Getting started
 
