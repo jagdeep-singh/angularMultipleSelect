@@ -64,4 +64,14 @@
         <label>Selected Model Value :<br/></label>{{skills}}
         <br/>
     </div>
+
+    <div class="mrg-top50">
+        <label>6. Limit selection amount.</label>
+        <multiple-autocomplete ng-model="skills"
+                               object-property="name"
+                               limit="2"
+                               suggestions-arr="skillsList">
+        </multiple-autocomplete>
+        <br/>
+    </div>
 </div>

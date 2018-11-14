@@ -16,7 +16,8 @@
                     beforeRemoveItem : '=?',
                     afterRemoveItem : '=?',
                     closeAfterSelected: '=?',
-                    placeholder: '@'
+                    placeholder: '@',
+                    limit: '@'
                 },
                 templateUrl: 'multiple-autocomplete-tpl.html',
                 link : function(scope, element, attr){
@@ -28,6 +29,8 @@
                     scope.isHover = false;
                     scope.isFocused = false;
                     scope.placeholder = attr.placeholder;
+                    scope.limit = attr.limit;
+                    scope.inputVisible = true;
                     var getSuggestionsList = function () {
                         var url = scope.apiUrl;
                         var method = (scope.apiUrlOption && scope.apiUrlOption.method) || "GET";
@@ -123,8 +126,16 @@
                             scope.afterSelectItem(selectedValue);
                         scope.inputValue = "";
 
-                        if(scope.suggestionsArr.length == scope.modelArr.length || scope.closeAfterSelected === true){
+
+                        console.log('scope.limit: ' + scope.limit);
+                        console.log('scope.modelArr.length : ' + scope.modelArr.length );
+                        if(scope.suggestionsArr.length == scope.modelArr.length ||
+                            scope.closeAfterSelected === true ||
+                            scope.modelArr.length == scope.limit
+                        ){
                             scope.isHover = false;
+                            scope.inputVisible = scope.modelArr.length != scope.limit;
+                            console.log('scope.inputVisible: ' + scope.inputVisible);
                         }
                     };
 
@@ -167,6 +178,7 @@
                                     scope.afterRemoveItem(item);
                             }
                         }
+                        scope.inputVisible = scope.modelArr.length != scope.limit;
                     };
 
                     scope.mouseEnterOnItem = function (index) {

@@ -11,10 +11,17 @@
 			</span>
         </li>
         <li>
-            <input name="{{name}}" ng-model="inputValue" placeholder="{{placeholder}}" ng-keydown="keyParser($event)"
-                   err-msg-required="{{errMsgRequired}}"
-                   ng-focus="onFocus()" ng-blur="onBlur()" ng-required="!modelArr.length && isRequired"
-                    ng-change="onChange()">
+            <input name="{{name}}"
+                ng-model="inputValue"
+                placeholder="{{placeholder}}"
+                ng-keydown="keyParser($event)"
+                err-msg-required="{{errMsgRequired}}"
+                ng-focus="onFocus()"
+                ng-blur="onBlur()"
+                ng-required="!modelArr.length && isRequired && inputVisible"
+                ng-change="onChange()"
+                ng-show="inputVisible"
+                >
         </li>
     </ul>
     

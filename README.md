@@ -85,6 +85,16 @@ $scope.afterRemoveItem = function(item){
     </multiple-autocomplete>
 ```
 
+7. Limit : Limit selection amount
+
+```html
+    <multiple-autocomplete ng-model="skills2" 
+                           name="multipleSelect"
+                           limit="2"
+                           suggestions-arr="skillsList1">
+    </multiple-autocomplete>
+```
+
 #Getting started
 
 Install "angular-multiple-select" from bower or npm and save it in your package.json or bower.json.
